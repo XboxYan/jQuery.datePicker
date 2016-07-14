@@ -1,0 +1,172 @@
+.date-picker-wrapper
+{
+	position:absolute;
+	z-index:1;
+	border: 1px solid #ebebeb;
+    color: #777777;
+    border-radius: 3px;
+	background: #fff;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+}
+.date-picker-wrapper .month-name
+{
+  text-transform: uppercase;
+}
+.date-picker-wrapper .month-wrapper
+{
+	display: inline-block;
+  	white-space: nowrap;
+  	font-size: 0;
+  	font-family: 'Microsoft Yahei';
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+.date-picker-wrapper .month-wrapper .table{
+	width:230px;
+	font-size: 12px;
+	display: inline-block;
+	padding: 0 5px;
+	vertical-align: top;
+}
+.date-picker-wrapper .month-wrapper table
+{
+	width: 100%;
+}
+.date-picker-wrapper .month-wrapper table.month2
+{
+	margin-left: 1px;
+}
+.date-picker-wrapper .month-wrapper table th,
+.date-picker-wrapper .month-wrapper table td
+{
+	font-weight: normal;
+	text-align:center;
+}
+.date-picker-wrapper .month-wrapper table .day
+{
+	height: 26px;
+	line-height: 26px;
+}
+.date-picker-wrapper .month-wrapper table div.day.lastMonth,
+.date-picker-wrapper .month-wrapper table div.day.nextMonth
+{
+	color:#999;
+	cursor:default;
+}
+.date-picker-wrapper .month-wrapper table .day.checked
+{
+	background-color: #e0f4fb;
+}
+.date-picker-wrapper .month-wrapper table .week-name
+{
+	height:26px;
+	background: #f9f9f9;
+  	text-transform: uppercase;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid
+{
+	color:#333;
+	cursor:pointer;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering
+{
+	background-color: #cdecfa;
+}
+
+.date-picker-wrapper .month-wrapper table .day.nextMonth,
+.date-picker-wrapper .month-wrapper table .day.lastMonth { display:none; }
+.date-picker-wrapper .month-wrapper table .day.invalid{ color: #ccc;}
+.date-picker-wrapper .month-wrapper table .day.real-today { box-shadow: inset 0 0 0 1px #32b8e2; }
+.date-picker-wrapper .month-wrapper table .day.valid:hover{background: #e0f4fb}
+.date-picker-wrapper .month-wrapper table .day.checked:hover{background: #fff}
+.date-picker-wrapper table .caption .next,
+.date-picker-wrapper table .caption .prev
+{
+	display: inline-block;
+	width: 100%;
+	height:34px;
+	line-height: 34px;
+	opacity: 0.8;
+	font-size: 13px;
+	cursor: pointer;
+}
+.date-picker-wrapper table .caption .next:hover,
+.date-picker-wrapper table .caption .prev:hover
+{
+	opacity: 1;
+}
+.date-picker-wrapper .gap
+{
+	position: absolute;
+	z-index: 1;
+	width:1px;
+	height: 100%;
+	background-color:#ebebeb;
+	top: 0;
+	left: 50%;
+}
+.date-picker-wrapper .selected-days
+{
+	display:none;
+}
+
+
+/*time styling*/
+.date-picker-wrapper .time {
+	font-size: 12px;
+	display: flex;
+}
+
+.date-picker-wrapper .time1, .time2 {
+	flex: 1;
+	box-sizing: border-box;
+	padding:0 5px;
+	text-align: center;
+}
+
+.date-picker-wrapper .first-date-selected { background-color:#32b8e2 !important; color:white !important;  }
+.date-picker-wrapper .last-date-selected { background-color:#32b8e2 !important; color:white !important;  }
+.ui_range input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+.ui_range input[type=range]:focus {
+  outline: none;
+}
+.ui_range input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #dcdcdc;
+  transition:.3s;
+}
+.ui_range input[type=range]::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background: #32b8e2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  transition:.3s;
+}
+.ui_range input[type=range]:hover::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+.ui_range input[type=range]:hover::-webkit-slider-thumb {
+  transform: scale(1.2,1.2)
+}
+.time input[type=range]{
+	flex: 1;
+	width: 1px;
+}
+.time .ui_range span{ width: 40px;}
+.time .ui_range{ padding: 5px 0; display: flex;}
+.select_time{ display: flex; padding: 10px 0 5px 0; margin-top: 5px; border-top: 1px solid #eee;}
+.select_time strong{ width: 40px; font-weight: normal;}
+.date-picker-wrapper.single-month .time .select_time strong,.date-picker-wrapper.single-month .time .ui_range span{ 
+	width: 32px;
+	text-align: left;
+ }
